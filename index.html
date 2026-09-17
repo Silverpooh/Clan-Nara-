@@ -120,12 +120,17 @@
   .rule-block{border-left:2px solid var(--moss);padding-left:22px;}
   .rule-block h4{font-size:1.05rem;color:var(--bronze-light);margin-bottom:10px;font-family:'PT Serif',serif;}
   .rule-block p{color:var(--ink-dim);font-size:0.97rem;}
-  .shogi-link{
-    display:inline-flex;align-items:center;gap:6px;margin-top:16px;
-    font-size:0.88rem;color:var(--bronze-light);border-bottom:1px solid var(--bronze);
-    padding-bottom:2px;transition:opacity .2s;
+  .shogi-btn{
+    display:inline-flex;align-items:center;gap:10px;margin-top:22px;
+    background:var(--bronze);color:#14170f;
+    font-family:'PT Serif',serif;font-size:1.05rem;font-weight:700;
+    padding:16px 30px;border-radius:2px;
+    box-shadow:0 0 0 1px var(--bronze);
+    transition:background .2s, transform .2s;
   }
-  .shogi-link:hover{opacity:0.75;}
+  .shogi-btn svg{width:18px;height:18px;flex-shrink:0;transition:transform .2s;}
+  .shogi-btn:hover{background:var(--bronze-light);transform:translateY(-1px);}
+  .shogi-btn:hover svg{transform:translateX(3px);}
 
   /* ROLE */
   .role-note{
@@ -252,7 +257,10 @@
         <div class="rule-block">
           <h4>Разрешение внутренних конфликтов</h4>
           <p>В случае внутриклановых разногласий всё решается диалогом. Если же данный метод не даёт результата, то правый выясняется партией в сёги.</p>
-          <a class="shogi-link" href="https://yandex.ru/games/app/468263" target="_blank" rel="noopener">Сыграть партию в сёги →</a>
+          <a class="shogi-btn" href="https://yandex.ru/games/app/468263" target="_blank" rel="noopener">
+            <span>Сыграть в сёги</span>
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </div>
